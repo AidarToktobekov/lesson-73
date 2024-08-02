@@ -8,9 +8,12 @@ app.get('/', (req, res) => {
   res.send('Home');
 
 });
-app.listen(port, ()=>{
-    console.log(`server ${port}`);
-})
+app.get('/:word', (req, res) => {
+
+    res.send(req.params.word);
+  
+});
+
 
 
 
